@@ -3,6 +3,9 @@ class Play extends Phaser.Scene {
     constructor() {
         super("playScene");
     }
+    preLoad() {
+        this.load.image('starfield', 'assets/starfield.png');
+    }
     create() {
         this.starfield = this.add.tileSprite(
             0, 0, 640, 480, 'starfield').setOrigin(0, 0);
@@ -19,6 +22,6 @@ class Play extends Phaser.Scene {
     
     }
     update() {
-        this.starfield.x += 4;
+        this.starfield.tilePositionX -= 4;
     }
 }
