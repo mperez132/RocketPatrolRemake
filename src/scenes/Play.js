@@ -3,7 +3,7 @@ class Play extends Phaser.Scene {
     constructor() {
         super("playScene");
     }
-    preLoad() {
+    preload() {
         this.load.image('starfield', './assets/starfield.png');
 
     }
@@ -22,7 +22,7 @@ class Play extends Phaser.Scene {
 	    this.add.rectangle(game.config.width - borderUISize, 0, borderUISize, game.config.height, 0xFFFFFF).setOrigin(0 ,0);
     }
     update() {
-        this.starfield.tilePositionX -= 4;
+        this.starfield.tilePositionX -= 1;
 
     }
 }
